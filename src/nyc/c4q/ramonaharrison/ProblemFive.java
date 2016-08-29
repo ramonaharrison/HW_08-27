@@ -28,9 +28,7 @@ public class ProblemFive {
     // " # # \n# # \n # # \n# # \n"
 
     public static void main(String[] args) {
-        System.out.println(chessboard(4));
-        System.out.println();
-        System.out.println(" # # \n# # \n # # \n# # \n");
+        System.out.println(chessboard(3));
     }
 
     public static String chessboard(int size) {
@@ -43,6 +41,9 @@ public class ProblemFive {
             }
 
             for (int i = 0; i < size; i++) {
+                if (j % 2 == 0 && i == size-1) {
+                    break;
+                }
                 if (i % 2 == 0) {
                     board += "#";
                 } else {
